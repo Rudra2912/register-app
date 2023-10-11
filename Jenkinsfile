@@ -15,8 +15,7 @@ pipeline {
 			step{
 				git branch: 'Dev', credentialsId : 'github', url: 'https://github.com/Rudra2912/register-app.git'
 			}
-	}
-
+		}
 		stage('Build application'){
 			step{
 				sh "mvn clean package"
@@ -28,4 +27,5 @@ pipeline {
 				sh "mvn Test"
 			}
 		}
+	}
 }
